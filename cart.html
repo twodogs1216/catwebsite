@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>猫車</title>
+    <style>
+        @font-face {
+            font-family: 'KozMinBold'; /* 自定义字体名称 */
+            src: url('KOZMINPR6N-BOLD.OTF') format('opentype'); /* 直接在主文件夹加载 */
+            font-weight: bold;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Microsoft YaHei', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f8f8f8;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 18px;
+        }
+
+        .menu > a:hover {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .menu-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+        .cart-container {
+            margin-top: 120px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .cart-items {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        .cart-item {
+            font-size: 18px;
+            color: #333;
+        }
+
+        .cart-item-price {
+            font-size: 20px;
+            color: #000;
+        }
+
+        .checkout-button {
+            display: inline-block;
+            padding: 12px 24px;
+            margin-top: 30px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 18px;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s;
+        }
+
+        .checkout-button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu-container">
+            <div class="menu">
+                <a href="index.html">ホームページ</a>
+                <a href="series1-main.html">猫姫様</a>
+                <a href="series2-main.html">猫王様</a>
+                <a href="series3-main.html">猫王様の姫様</a>
+                <a href="series4-main.html">猫王様の姫様の叔母さん</a>
+                <a href="series5-main.html">猫王様の姫様の叔母さんの息子の友達</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="cart-container">
+        <h1>猫車</h1>
+        <div class="cart-items" id="cart-items">
+        </div>
+        <a href="checkout.html" class="checkout-button">合計</a>
+    </div>
+
+    <script>
+        function addToCart(name, price) {
+            const cartItems = document.getElementById('cart-items');
+            const cartItem = document.createElement('div');
+            cartItem.classList.add('cart-item');
+            cartItem.innerHTML = `${name} - <span class="cart-item-price">${price}</span>`;
+            cartItems.appendChild(cartItem);
+        }
+    </script>
+
+</body>
+</html>

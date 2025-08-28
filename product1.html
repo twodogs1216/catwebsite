@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>product1</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        @font-face {
+            font-family: 'KozMinBold'; /* 自定义字体名称 */
+            src: url('KOZMINPR6N-BOLD.OTF') format('opentype'); /* 直接在主文件夹加载 */
+            font-weight: bold;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Microsoft YaHei Light', 'Microsoft YaHei', Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f6f6e7;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 18px; 
+        }
+
+        .menu > a:hover {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+
+        .cart {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            position: absolute;
+            right: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart:hover {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .cart::before {
+            content: '\1F6D2'; 
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+
+        .spacer {
+            margin-top: 100px; 
+        }
+
+
+        .product-container {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .product-image {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            margin: 50px auto; 
+        }
+
+        .product-name {
+            font-size: 22px;
+            font-weight: 300; 
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 18px;
+            color: #000000; 
+            margin-top: 5px;
+        }
+
+
+        .heart-button {
+            width: 50px;  
+            height: 50px; 
+            background-color: #f5f5dc; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            margin: 20px auto; 
+            border-radius: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .heart-button:hover {
+            background-color: #e0e0b8; 
+        }
+
+
+        .heart-button i {
+            font-size: 20px;  
+            color: #de12d0; 
+        }
+
+
+        .product-description {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+  
+        .specifications {
+            font-size: 16px;
+            color: #333;
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+
+        .model-selection {
+            font-size: 16px;
+            color: #333;
+            margin-top: 30px;
+        }
+
+
+        select {
+            padding: 8px;
+            font-size: 16px;
+            margin-top: 10px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+            width: 200px; 
+            display: block; 
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+
+
+        table {
+            width: 80%;
+            margin: 30px auto;
+            border-collapse: collapse;
+            text-align: center;
+        }
+
+        table th, table td {
+            border: 1px solid #ccc;
+            padding: 10px;
+        }
+
+        table th {
+            background-color: #f8f8f8;
+        }
+
+
+        .comparison-img {
+            width: 50px;
+            height: 50px;
+            object-fit: cover;
+            margin: 0 auto;
+        }
+
+
+        .purchase-notice {
+            font-size: 16px;
+            color: #333;
+            margin-top: 30px;
+            line-height: 1.6;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu">
+            <a href="index.html">ホームページ</a>
+            <a href="series1-main.html">猫姫様</a>
+            <a href="series2-main.html">猫王様</a>
+            <a href="series3-main.html">猫王様の姫様</a>
+            <a href="series4-main.html">猫王様の姫様の叔母さん</a>
+            <a href="series5-main.html">猫王様の姫様の叔母さんの息子の友達</a>
+        </div>
+
+        <a href="cart.html" class="cart">Cart</a>
+    </nav>
+
+    <div class="spacer"></div>
+
+    <div class="product-container">
+        <img src="product1.jpg" alt="Product Image" class="product-image">
+        <div class="product-name">ティーカップ猫</div>
+        <div class="product-price">¥10</div> 
+
+        <div class="model-selection">
+            <label for="model-select">頭の上のティーカップの色：</label>
+            <select id="model-select">
+                <option value="1">清純なブルー</option>
+                <option value="2">誘惑のレッド</option>
+                <option value="3">甘いピンク</option>
+                <option value="4">勇敢なイエロー</option>
+                <option value="5">清潔なホワイト</option>
+            </select>
+        </div>
+
+        <div class="heart-button">
+            <i class="fas fa-heart"></i>
+        </div>
+
+        <div class="product-description">
+            頭の上<br>
+            茶杯揺れてる<br>
+            貴族猫
+        </div>
+        
+
+<table>
+    <thead>
+        <tr>
+            <th>色</th>
+            <th>体長</th>
+            <th>体重</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>清純なブルー</td>
+            <td>64cm</td>
+            <td>5.0kg</td>
+        </tr>
+        <tr>
+            <td>誘惑のレッド</td>
+            <td>65cm</td>
+            <td>5.2kg</td>
+        </tr>
+        <tr>
+            <td>甘いピンク</td>
+            <td>64.5cm</td>
+            <td>5.1kg</td>
+        </tr>
+        <tr>
+            <td>勇敢なイエロー</td>
+            <td>66cm</td>
+            <td>5.3kg</td>
+        </tr>
+        <tr>
+            <td>清潔なホワイト</td>
+            <td>65.5cm</td>
+            <td>5.2kg</td> 
+        </tr>
+    </tbody>
+</table>
+
+
+        <div class="specifications">
+            色とデザイン：灰白色を基調としたマンチカン小猫  
+        </div>
+
+        <div class="purchase-notice">
+            これは、私たちの製品に関する重要な購入ガイドラインです。過敏症に起因する健康問題を避けるため、必ずご注意ください。また、品質に問題がない場合、返品・交換はお受けできませんので、サイズをよくご確認の上ご購入ください。配送は郵便を使用し、到着は100〜400日程度です。東京都外への配送は、送料がかかる場合がありますのでご注意ください。ご購入ありがとうございます。今後ともよろしくお願い申し上げます。
+        </div>
+    </div>
+<footer class="footer" style="text-align: center; margin: 0 auto; padding: 10px 0;">        
+    K024C2149 LICAN ©2024
+</footer>
+</body>
+</html>
