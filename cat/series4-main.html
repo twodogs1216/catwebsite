@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Series 1 - Bestsellers</title>
+    <style>
+        @font-face {
+            font-family: 'KozMinBold'; /* 自定义字体名称 */
+            src: url('KOZMINPR6N-BOLD.OTF') format('opentype'); /* 直接在主文件夹加载 */
+            font-weight: bold;
+            font-style: normal;
+        }
+        body {
+            font-family: 'Microsoft YaHei Light', 'Microsoft YaHei', Arial, sans-serif; 
+            margin: 0;
+            padding: 0;
+        }
+
+
+        .navbar {
+            display: flex;
+            justify-content: center; 
+            align-items: center;
+            background-color: #f6f6e7;
+            padding: 20px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+
+        .menu {
+            display: flex;
+            gap: 20px;
+        }
+
+        .menu > a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            font-size: 18px; 
+        }
+
+        .menu > a:hover {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+
+        .menu-container {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+        }
+
+
+        .cart {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            position: absolute;
+            right: 20px;
+            font-size: 18px;
+            display: flex;
+            align-items: center;
+        }
+
+        .cart:hover {
+            background-color: #eee;
+            border-radius: 5px;
+        }
+
+        .cart::before {
+            content: '\1F6D2'; 
+            font-size: 22px;
+            margin-right: 8px;
+        }
+
+        .spacer {
+            margin-top: 100px; 
+        }
+
+        .big-image-container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding-top: 37.5%; 
+            position: relative;
+            margin-top: 120px; 
+            margin-bottom: 120px; 
+        }
+
+        .big-image-container img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* 图片下方的文字 */
+        .image-text {
+            font-size: 18px;
+            color: #333;
+            text-align: center;
+            padding: 20px;
+            margin-top: 20px;
+            line-height: 1.6;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .bestsellers, .recommendations {
+            margin: 100px auto;
+            padding: 20px;
+            max-width: 1200px;
+            text-align: center;
+        }
+
+        .bestsellers h1, .recommendations h1 {
+            font-size: 20px;
+            font-weight: normal; 
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        .products, .recommendations-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr); 
+            gap: 20px;
+        }
+
+        .product-card {
+            background: white;
+            text-align: center;
+        }
+
+        .product-image-container {
+            width: 100%;
+            position: relative;
+            padding-top: 100%; 
+        }
+
+        .product-image-container a {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .discount-badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: #4CAF50;
+            color: white;
+            font-size: 12px;
+            padding: 2px 5px;
+            border-radius: 3px;
+        }
+
+        .product-name {
+            font-size: 16px;
+            color: #333;
+            margin-top: 10px;
+        }
+
+        .product-price {
+            font-size: 16px;
+            color: #000;
+            margin: 5px 0;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="menu">
+            <a href="index.html">ホームページ</a>
+            <a href="series1-main.html">猫姫様</a>
+            <a href="series2-main.html">猫王様</a>
+            <a href="series3-main.html">猫王様の姫様</a>
+            <a href="series4-main.html">猫王様の姫様の叔母さん</a>
+            <a href="series5-main.html">猫王様の姫様の叔母さんの息子の友達</a>
+        </div>
+
+
+        <a href="cart.html" class="cart">
+            <div class="cart-icon"></div>
+            
+        </a>
+    </nav>
+
+    <div class="big-image-container">
+        <img src="large-image4.jpg" alt="Big Image">
+    </div>
+
+
+    <div class="image-text">
+        ここの猫ちゃん写真はすべて実物写真で、彼らの奴隷りさんさんが自ら撮影しました。すべて大人気のデザインです！必要ならクリックして詳細をご確認ください。ただ、最近第7回目のITパスポート試験（過去6回全滅）に向けて勉強中のため、猫ちゃんの全ての詳細情報を掲載できず、誠に申し訳ありません！もしあなたが身長170cm以上のイケメン、または160cm以上の美人であれば、ホームページのQRコードをスキャンしてください。このウェブサイトを毎日更新してお知らせします！
+    </div>
+
+    <div class="bestsellers">
+        <h1>Our Bestsellers</h1>
+        <div class="products">
+            <div class="product-card">
+                <div class="discount-badge">-20%</div>
+                <div class="product-image-container">
+                    <a href="product1.html">
+                        <img src="product1.jpg" alt="Product 1" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price"><del>¥10</del> 美人購入者には無料</div>
+                <div class="product-name">ティーカップ猫</div>
+            </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <a href="product2.html">
+                        <img src="product2.jpg" alt="Product 2" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price">¥1</div>
+                <div class="product-name">頸椎症猫</div>
+            </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <a href="product3.html">
+                        <img src="product3.jpg" alt="Product 3" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price">食べすぎて、負担が大きすぎるため、¥-1,000</div>
+                <div class="product-name">食いしん坊猫</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="recommendations">
+        <h1>おすすめ</h1>
+        <div class="recommendations-grid">
+            <div class="product-card">
+                <div class="discount-badge">-10%</div>
+                <div class="product-image-container">
+                    <a href="recommendation1.html">
+                        <img src="recommendation1.jpg" alt="Recommendation 1" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price"><del>¥2,500</del> ¥2,250</div>
+                <div class="product-name">お腹を見せるエロイな猫</div>
+            </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <a href="recommendation2.html">
+                        <img src="recommendation2.jpg" alt="Recommendation 2" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price">¥3,000</div>
+                <div class="product-name">白いストッキングを履いた猫</div>
+            </div>
+            <div class="product-card">
+                <div class="product-image-container">
+                    <a href="recommendation3.html">
+                        <img src="recommendation3.jpg" alt="Recommendation 3" class="product-image">
+                    </a>
+                </div>
+                <div class="product-price">¥2,700</div>
+                <div class="product-name">何も分かっていないように猫</div>
+            </div>
+        </div>
+    </div>
+    
+<footer class="footer" style="text-align: center; margin: 0 auto; padding: 10px 0;">        
+    K024C2149 LICAN ©2024
+</footer>
+
+    
+</body>
+</html>
